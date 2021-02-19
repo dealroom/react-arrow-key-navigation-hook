@@ -1,0 +1,29 @@
+{
+  "name": "react-arrow-key-navigation-hook",
+  "version": "1.0.1",
+  "description": "A React hook & associated functions to implement arrow key navigation through a component",
+  "main": "src/hook.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dealroom/react-arrow-key-navigation-hook.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Ash Kyd <ash@kyd.com.au>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dealroom/react-arrow-key-navigation-hook/issues"
+  },
+  "homepage": "https://github.com/dealroom/react-arrow-key-navigation-hook#readme",
+  "prettier": {},
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "react": "^16.8.0"
+  }
+}
