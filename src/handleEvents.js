@@ -10,14 +10,16 @@ function handleArrowKey({ event, currentIndex, availableElements }) {
   if (currentIndex === -1) availableElements[0].focus();
 
   // Move the focus up or down
+  let nextElement;
   if (event.key === "ArrowDown") {
-    availableElements[currentIndex + 1]?.focus();
+    nextElement = availableElements[currentIndex + 1];
   }
 
   if (event.key === "ArrowUp") {
-    availableElements[currentIndex - 1]?.focus();
+    nextElement = availableElements[currentIndex - 1];
   }
 
+  nextElement && nextElement.focus();
   event.preventDefault();
 }
 
@@ -47,7 +49,7 @@ export default function handleEvents({
   // No elements are available to loop through.
   if (!availableElements.length) return;
 
-  // Which index are we currently selecting
+  // Which index is currently selected
   const currentIndex = Array.from(availableElements).findIndex(
     (availableElement) => availableElement === activeElement
   );
