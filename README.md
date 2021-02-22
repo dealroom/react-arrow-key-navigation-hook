@@ -31,7 +31,7 @@ on specific class names or selectors of your choosing.
 You can use the functionality independently of React:
 
 ```js
-import handleEvents from "react-arrow-key-navigation-hook/src/handleEvents";
+import handleEvents from "react-arrow-key-navigation-hook/dist/handleEvents";
 
 const eventHandler = (event) => {
   handleEvents({
