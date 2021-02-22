@@ -2,9 +2,11 @@
   "name": "react-arrow-key-navigation-hook",
   "version": "1.0.1",
   "description": "A React hook & associated functions to implement arrow key navigation through a component",
-  "main": "src/hook.js",
+  "main": "dist/hook.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "mkdir -p dist && npm run build-hook && npm run build-handleEvents",
+    "build-hook": "rollup src/hook.js -f cjs|uglifyjs --compress --mangle > dist/hook.js",
+    "build-handleEvents": "rollup src/handleEvents.js -f cjs|uglifyjs --compress --mangle > dist/handleEvents.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,9 @@
     "react": "^16.8.0"
   },
   "devDependencies": {
-    "react": "^16.8.0"
+    "react": "^16.8.0",
+    "rollup": "^2.39.0",
+    "terser": "^5.6.0",
+    "uglify-js": "^3.12.8"
   }
 }
