@@ -15,7 +15,7 @@ export default function useArrowKeyNavigation(props) {
       handleEvents({ event, parentNode: parentNode.current, selectors });
     };
     document.addEventListener("keydown", eventHandler);
-    return () => document.addEveEventListener("keydown", eventHandler);
+    return () => document.removeEventListener("keydown", eventHandler);
   }, []);
 
   return parentNode;
