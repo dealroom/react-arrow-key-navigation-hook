@@ -6,7 +6,8 @@
   "scripts": {
     "build": "mkdir -p dist && npm run build-hook && npm run build-handleEvents",
     "build-hook": "rollup src/hook.js -f cjs|uglifyjs --compress --mangle > dist/hook.js",
-    "build-handleEvents": "rollup src/handleEvents.js -f cjs|uglifyjs --compress --mangle > dist/handleEvents.js"
+    "build-handleEvents": "rollup src/handleEvents.js -f cjs|uglifyjs --compress --mangle > dist/handleEvents.js",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
