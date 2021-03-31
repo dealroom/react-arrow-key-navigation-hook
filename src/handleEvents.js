@@ -35,16 +35,20 @@ export default function handleEvents({
   parentNode,
   selectors = "a,button,input",
 }) {
+  if(!parentNode) return;
+
   const key = event.key;
   if (!["ArrowUp", "ArrowDown", "Enter"].includes(key)) {
     return;
   }
 
   const activeElement = document.activeElement;
-  const availableElements = parentNode.querySelectorAll(selectors);
 
   // If we're not inside the container, don't do anything
   if (!parentNode.contains(activeElement)) return;
+
+  // Get the list of elements we're allowed to scroll through
+  const availableElements = parentNode.querySelectorAll(selectors);
 
   // No elements are available to loop through.
   if (!availableElements.length) return;
