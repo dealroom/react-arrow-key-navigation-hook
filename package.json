@@ -1,6 +1,6 @@
 {
   "name": "react-arrow-key-navigation-hook",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A React hook & associated functions to implement arrow key navigation through a component",
   "main": "dist/hook.js",
   "scripts": {
