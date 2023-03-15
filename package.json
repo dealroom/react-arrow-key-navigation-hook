@@ -3,10 +3,9 @@
   "version": "1.0.1",
   "description": "A React hook & associated functions to implement arrow key navigation through a component",
   "main": "dist/hook.js",
+  "module": "dist/hook.es.js",
   "scripts": {
-    "build": "mkdir -p dist && npm run build-hook && npm run build-handleEvents",
-    "build-hook": "rollup src/hook.js -f cjs|uglifyjs --compress --mangle > dist/hook.js",
-    "build-handleEvents": "rollup src/handleEvents.js -f cjs|uglifyjs --compress --mangle > dist/handleEvents.js",
+    "build": "rollup -c",
     "prepare": "npm run build"
   },
   "repository": {
@@ -27,9 +26,18 @@
     "react": "^16.8.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/react": "^18.0.28",
     "react": "^16.8.0",
-    "rollup": "^2.39.0",
-    "uglify-js": "^3.12.8"
+    "rollup": "^2.68.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5"
   },
   "dependencies": {}
 }
